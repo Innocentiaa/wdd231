@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD231 Course Home Page" />
+    <meta name="author" content="Innocentia Chinweotito Ekechukwu" />
+    <title>Innocentia Chinweotito Ekechukwu|WDD231</title>
+    
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/small.css" />
+    <link rel="stylesheet" href="styles/large.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <img src="images/logo.svg" alt="site logo" class="logo-icon">
+            <span class="logo-text">Innocentia Chinweotito Ekechukwu</span>
+        </div>
+
+        <button id="menu-toggle" aria-label="Toggle Menu">
+            <span class="hamburger">&#9776;</span>
+            <span class="close">&#215;</span>
+        </button>
+    </header>
+
+    <nav id="nav-menu" class="hidden">
+        <ul>
+            <a href="index.html">Home</a>
+            <a href="#">Chamber Project</a>
+            <a href="#">Final Project</a>
+        </ul> 
+    </nav>
+
+    <main>
+        <h1>Home</h1>
+
+        <section class="about-me">
+            <h2>About Me</h2>
+            <p>My name is Innocentia. Welcome to my WDD231 course homepage. I am a student who loves learning and creating beautiful things on the web. I'm excited to grow as a frontend developer! This page demonstrates responsive design and dynamic content using HTML, CSS and JavaScript.</p>
+        </section>
+
+        <section class="student-photo">
+            <h2>Student Photo</h2>
+            <img src="images/studentphoto.jpg" alt="Innocentia Ekechukwu" width="200" loading="lazy">
+        </section>
+
+        <section class="courses">
+            <h2>Web Certificate Courses</h2>
+
+            <div id="courseFilters">
+                <button>All Courses</button>
+                <button>WDD</button>
+                <button>CSE</button>
+            </div>
+            <div id="courses">
+
+            </div>
+            <p id="credit-summary">
+                The total credits for course listed above is <span id="totalCredits">0</span>
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-icons">
+        <a href="https://www.linkedin.com/in/ekechukwuic/" target="_blank"><img src="images/linkedin.webp" width="40" alt="linkedin"></a>
+        <a href="https://github.com/Innocentiaa" target="_blank"> <img src="images/github.jpeg" width="40" alt="github"></a>
+        <a href="https://www.instagram.com/centiagwendolyn/" target="_blank"><img src="images/Instagram.webp" width="40" alt="linkedin"></a>
+       </div>
+       <p>
+        &copy; <span id="currentyear"></span> Innocentia Chinweotito Ekechukwu | Nigeria
+       </p> 
+       <p id="lastModified"></p>
+       
+    </footer>
+</body>
+</html>

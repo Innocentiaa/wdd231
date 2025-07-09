@@ -1,0 +1,99 @@
+@media screen and (min-width:768px) {
+
+  header {
+    justify-content: flex-start;
+    gap: 2rem;
+  }
+
+  #menu-toggle {
+    display: none;
+  }
+
+  #nav-menu{
+    display: flex !important;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: #2a4d69;
+    padding: 1rem 2rem;
+  }
+
+    #nav-menu ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+    list-style:none;
+  }
+
+  #nav-menu a {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+  }
+
+  nav a:hover {
+    background-color: #4b86b4;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  main h1 {
+    grid-column: span 2;
+  }
+
+  .about-me, .student-photo{
+    background-color: #f0f0f0;
+    padding: 1rem;
+    border-radius: 5px;
+  }
+
+  .student-photo img{
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+  }
+
+  #courseFilters {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+
+  #courseFilters button{
+    flex: 1;
+    text-align: center;
+    padding: 0.75rem;
+  
+  }
+
+  .courses{
+    grid-column: span 2;
+  }
+
+  #courses {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+  }
+
+  footer {
+  text-align: center;
+  padding: 2rem;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+  
+}
