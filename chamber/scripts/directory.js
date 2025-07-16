@@ -31,6 +31,9 @@ const displayMembers = (members) => {
     img.setAttribute("src", `images/${member.image}`);
     img.setAttribute("alt", `Logo of ${member.name}`);
     img.setAttribute("loading", "lazy");
+    img.setAttribute("width", "200");
+    img.setAttribute("height", "200");
+
 
     const info = document.createElement("div");
     info.classList.add("member-info");

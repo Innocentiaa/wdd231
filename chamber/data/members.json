@@ -4,7 +4,7 @@
     "address": "123 Main St, Owerri, Nigeria",
     "phone": "+234 800 123 4567",
     "website": "http://127.0.0.1:5500/index.html",
-    "image": "logo.svg",
+    "image": "codecraft.png",
     "membership": 3,
     "description": "Your go-to for website design and IT support."
   },
@@ -13,7 +13,7 @@
     "address": "Uratta Road, Owerri, Imo State",
     "phone": "+2349011461015",
     "website": "https://coldhubs.com/",
-    "image": "ibuscorp.jpeg",
+    "image": "ibuscorp.jpg",
     "membership": 2,
     "description": "At ColdHubs, we reduce post-harvest losses of fresh fruits, vegetables and other perishable food and enhance food security by delivering reliable, innovative cold chain solutions across Nigeria."
   },
@@ -22,7 +22,7 @@
     "address": "Ironsi Street. Owerri, Imo",
     "phone": "+234 907 515 9406",
     "website": "https://lumenatech.com/",
-    "image": "lumenatech.jpeg",
+    "image": "lumenatech.jpg",
     "membership": 1,
     "description": "A global enterprise technology platform, Lumena receives positive reviews for their web development and digital solutions."
   },
@@ -49,7 +49,7 @@
     "address": "32 Market Ave, Owerri",
     "phone": "+234 808 654 3210",
     "website": "https://glitzbeauty.ng",
-    "image": "glitz-logo.jpeg",
+    "image": "glitz-logo.jpg",
     "membership": 1,
     "description": "Makeup, skincare, and wellness services."
   },
