@@ -1,0 +1,65 @@
+[
+  {
+    "name": "CodeCraft Web Services",
+    "address": "123 Main St, Owerri, Nigeria",
+    "phone": "+234 800 123 4567",
+    "website": "http://127.0.0.1:5500/index.html",
+    "image": "logo.svg",
+    "membership": 3,
+    "description": "Your go-to for website design and IT support."
+  },
+  {
+    "name": "Cold Hubs",
+    "address": "Uratta Road, Owerri, Imo State",
+    "phone": "+2349011461015",
+    "website": "https://coldhubs.com/",
+    "image": "ibuscorp.jpeg",
+    "membership": 2,
+    "description": "At ColdHubs, we reduce post-harvest losses of fresh fruits, vegetables and other perishable food and enhance food security by delivering reliable, innovative cold chain solutions across Nigeria."
+  },
+  {
+    "name": "Lumena Technologies",
+    "address": "Ironsi Street. Owerri, Imo",
+    "phone": "+234 907 515 9406",
+    "website": "https://lumenatech.com/",
+    "image": "lumenatech.jpeg",
+    "membership": 1,
+    "description": "A global enterprise technology platform, Lumena receives positive reviews for their web development and digital solutions."
+  },
+  {
+    "name": "Scents_by_fiorire",
+    "address": "Okwulaga, Afaraukwu Rd, Umuahia",
+    "phone": "+234 816 436 3560",
+    "website": "https://www.instagram.com/scentsbyblom?igsh=a2Y4bXpjZnRmNjFu",
+    "image": "fiorire.jpg",
+    "membership": 2,
+    "description": "Scents_by_fiorire sells undiluted perfume oils, long lasting body sprays, mist, perfumes, car diffusers etc. We work with all budgets and are good with recommendations."
+  },
+  {
+    "name": "SkillUp Training Center",
+    "address": "88 Education Rd, Owerri",
+    "phone": "+234 902 876 5432",
+    "website": "https://skillup.ng",
+    "image": "skillup-logo.png",
+    "membership": 3,
+    "description": "Empowering youths with digital skills."
+  },
+  {
+    "name": "Glitz Beauty Hub",
+    "address": "32 Market Ave, Owerri",
+    "phone": "+234 808 654 3210",
+    "website": "https://glitzbeauty.ng",
+    "image": "glitz-logo.jpeg",
+    "membership": 1,
+    "description": "Makeup, skincare, and wellness services."
+  },
+  {
+    "name": "Chuks Motors",
+    "address": "19 Okigwe Road, Owerri",
+    "phone": "+234 901 222 1111",
+    "website": "https://chuksmotors.ng",
+    "image": "chuks-logo.jpeg",
+    "membership": 2,
+    "description": "Trusted auto dealer and repair services."
+  }
+]
