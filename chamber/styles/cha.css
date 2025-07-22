@@ -1,0 +1,413 @@
+/* === RESET === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  background-color: #fdfdfd;
+  color: #333;
+}
+
+/* === HEADER === */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #004d40;
+  color: #fff;
+  padding: 1rem;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+/* === NAVIGATION === */
+#menu-toggle {
+  display: none;
+  background: none;
+  color: white;
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+nav {
+  width: 100%;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+}
+
+.navigation a {
+  color: white;
+  text-decoration: none;
+}
+
+.navigation a.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.navigation a:hover {
+  background-color: #00796b;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+}
+
+/* === HERO === */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  z-index: 2;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #007BFF;
+  color: white;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+/* === EVENTS === */
+.events {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  margin: 2rem 0;
+}
+
+.events h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.events ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+}
+
+/* === WEATHER === */
+.weather {
+  padding: 2rem;
+  text-align: center;
+}
+
+/* === SPOTLIGHT === */
+.spotlights {
+  padding: 2rem;
+  background-color: #e8f5e9;
+}
+
+.spotlight-container {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.spotlight-card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.spotlight-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* === FOOTER === */
+.footer-grid {
+  background-color: #004d40;
+  color: white;
+  padding: 2rem 1rem;
+  display: grid;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.footer-section h4 {
+  color: #ffc107;
+  margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  color: white;
+}
+
+/* === DIRECTORY STYLES === */
+.view-toggle {
+  text-align: center;
+  margin: 1rem auto;
+}
+
+#members-container.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding: 1rem;
+}
+
+#members-container.grid .member-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#members-container.list {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+#members-container.list .member-card {
+  display: flex;
+  align-items: center;
+  justify-content:flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+  background-color: #fff;
+  flex-wrap: wrap;
+}
+
+#members-container.list .member-card:nth-child(even) {
+  background-color: #f7f7f7;
+}
+
+#members-container.list .member-card img {
+  width: 70px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+#members-container.list .member-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+#members-container.list .member-info h3,
+#members-container.list .member-info p,
+#members-container.list .member-info a {
+  margin: 0;
+  white-space: nowrap;
+}
+
+.member-card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.member-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.member-info a {
+  color: #00796b;
+  text-decoration: none;
+}
+
+.member-info a:hover {
+  text-decoration: underline;
+}
+
+/* === MEDIA QUERIES === */
+@media (max-width: 599px) {
+  #menu-toggle {
+    display: block;
+  }
+
+  .navigation {
+    display: none;
+    flex-direction: column;
+    background-color: #00332b;
+    padding: 1rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    height: 100vh;
+    padding-top: 5rem;
+    z-index: 999;
+  }
+
+  .navigation.open {
+    display: flex;
+  }
+
+  .navigation a{
+    color: white;
+    padding: 0.75rem;
+    border-bottom: 1ppx solid rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .navigation a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+  }
+
+  .navigation li {
+    padding: 1.2rem 0;
+    border-top: 1px solid #fff;
+  }
+
+  .hero {
+    margin-top: 3.5rem; /* push hero below expanded nav */
+    padding-top: 1rem;
+  }
+
+  .hero-text {
+    max-width: 100%;
+    font-size: 0.5rem; /* or smaller if needed */
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    overflow-wrap: break-word;
+  }
+
+
+  header {
+   flex-direction: column;
+   align-items: flex-start;
+  }
+
+   .navigation.open + .hero {
+    margin-top: 200px; /* or whatever height your nav takes when open */
+  }
+}
+
+@media (min-width: 600px) and (max-width: 899px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .footer-grid {
+    grid-template-columns: repeat(3, 1fr);
+    text-align: left;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+}
+
+.weather {
+  background-color: #eef6fa;
+  padding: 2rem;
+  margin: 2rem 0;
+  border-left: 5px solid #007BFF;
+  border-radius: 8px;
+}
+
+.weather h2 {
+  margin-bottom: 1rem;
+}
+
+.weather p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.weather figure {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.weather img#weather-icon {
+  width: 60px;
+  height: 60px;
+}
+
+.weather figcaption {
+  font-style: italic;
+  color: #555;
+}
+
+#forecast {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  margin-top: 1rem;
+}
+
+#forecast div {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+#forecast div h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+#forecast div p {
+  font-size: 0.9rem;
+}

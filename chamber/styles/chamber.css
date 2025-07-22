@@ -229,3 +229,55 @@ nav {
     border-top: 1px solid #fff;
   }
 }
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #007BFF;
+  color: white;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.events {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  margin: 2rem 0;
+}
+
+.events h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.events ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+}

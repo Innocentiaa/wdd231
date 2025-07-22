@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Homepage of Imo State Chamber of Commerce.">
+    <meta name="author" content="Innocentia Chinweotito">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    
+    <meta property="og:title" content="Imo state Chamber of Commerce Directory">
+    <meta property="og:description" content="Explore member businesses and organizations in Imo State.">
+    <meta property="og:image" content="https://innocentiaa.github.io/wdd231/chamber/images/imologo.jpeg">
+    <meta property="og:url" content="https://innocentiaa.github.io/wdd231/chamber/directory.html">
+    <meta property="og:type" content="website">
+
+    <title>Imo State Chamber of Commerce | Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/cha.css">
+    <script src="scripts/index.js" defer></script>
+    <script src="scripts/spo.js" defer></script>
+
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <img src="images/logo.jpeg" alt="site logo" class="logo-icon" width="60" height="60">
+        </div>
+        <nav>
+            <button id="menu-toggle">☰</button>
+            <ul class="navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="directory.html" class="active">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+   <main>
+    <section class="hero">
+        <img src="images/hero.webp" alt="City overview or banner image">
+        <div class="hero-text">
+            <h1>Welcome to Imo State Chamber of Commerce</h1>
+            <a href="join.html" class="cta-button">Join the Chamber</a>
+        </div>
+    </section>
+
+    <section class="events">
+        <h2>Upcoming Events</h2>
+        <ul>
+            <li><strong>Business Expo</strong> – July 28 at Community Hall</li>
+            <li><strong>Monthly Networking Night</strong> – August 5</li>
+        </ul>
+    </section>
+
+    <section class="weather">
+        <h2>Current Weather</h2>
+        <p><span id="current-temp"></span></p>
+        <figure>
+
+            <img id="weather-icon" src="" alt="">
+            <figcaption id="weather-desc"></figcaption>
+        </figure>
+        <div id="forecast">
+            <!-- 3-day forecast will go here -->
+        
+        </div>
+    </section>
+
+    <section class="spotlights">
+        <h2>Business Spotlights</h2>
+        <div class="spotlight-container" id="spotlight-container">
+            <!-- JS will insert spotlight cards here -->
+        </div>
+    </section>
+
+    <footer class="footer-grid">
+
+        <div class="footer-section contact">
+            <h4>Imo State Chamber of Commerce</h4>
+            <p>Email: info@imostatechamber.ng</p>
+            <p>Phone: +234 800 123 4567</p>
+        <p>Address: 123 Business Lane, Owerri</p>
+        </div>
+
+        <div class=" footer-section social-icons">
+            <h4>Connect with Us</h4>
+            <a href="https://www.linkedin.com/in/ekechukwuic/" target="_blank"><img src="images/linkedin.webp" width="40" height="40" alt="linkedin"></a>
+            <a href="https://github.com/Innocentiaa" target="_blank"> <img src="images/github.png" width="40" height="40" alt="GitHub profile link"></a>
+            <a href="https://www.instagram.com/centiagwendolyn/" target="_blank"><img src="images/instagram.webp" width="40" height="40" alt="Instagram page"></a>
+            
+        </div>
+
+        <div class="footer-section credits">
+
+            <h4>All Rights Reserved </h4>
+            <p>&copy; <span id="year"></span> Innocentia Chinweotito</p>
+            <p>WDD 231 Project</p>
+            <p>Last Modified: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+
+</body>
+</html>
