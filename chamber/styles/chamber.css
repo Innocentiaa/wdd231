@@ -107,7 +107,7 @@ nav {
 .cta-button {
   display: inline-block;
   margin-top: 1rem;
-  background-color: #007BFF;
+  background-color: #004d40;
   color: white;
   padding: 0.5rem 1rem;
   text-decoration: none;
@@ -358,7 +358,7 @@ nav {
   background-color: #eef6fa;
   padding: 2rem;
   margin: 2rem 0;
-  border-left: 5px solid #007BFF;
+  border-left: 5px solid #004d40;
   border-radius: 8px;
 }
 

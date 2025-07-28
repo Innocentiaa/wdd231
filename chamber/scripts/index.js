@@ -48,12 +48,3 @@ menuToggle.addEventListener("click", () => {
   navList.classList.toggle("open");
   menuToggle.textContent = navList.classList.contains("open") ? "✖" : "☰";
 });
-
-// Grid/List view toggle with re-render
-document.getElementById("grid-view").addEventListener("click", async () => {
-  membersContainer.classList.add("grid");
-  membersContainer.classList.remove("list");
-  const response = await fetch(url);
-  const data = await response.json();
-  displayMembers(data);
-});
