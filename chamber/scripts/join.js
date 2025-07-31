@@ -14,7 +14,12 @@ menuToggle.addEventListener("click", () => {
 });
 
 // Set timestamp value on page load
-document.getElementById("timestamp").value = new Date().toISOString();
+
+const form = document.querySelector('form');
+form.addEventListener('submit', () => {
+  const timestampField = form.querySelector('[name="timestamp"]');
+  timestampField.value = new Date().toISOString();
+});
 
 // Modal functions
 function showModal(id) {

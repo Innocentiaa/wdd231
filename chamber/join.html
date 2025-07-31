@@ -20,6 +20,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/normalize.css" />
   <link rel="stylesheet" href="styles/join.css" />
+  <script src="scripts/join.js" defer></script>
 </head>
 <body>
   <header>
@@ -43,46 +44,44 @@
       <section class="form-section">
         <h2>Membership Application Form</h2>
         <form action="thankyou.html" method="get">
-          <label for="fname">First Name:
-            <input type="text" id="fname" name="fname" required autocomplete="given-name" title="Enter your first name" />
-          </label>
+          <label for="fname">First Name: </label>
+          <input type="text" id="fname" name="fname" required autocomplete="given-name" title="Enter your first name" />
+          
 
-          <label for="lname">Last Name:
-            <input type="text" id="lname" name="lname" required autocomplete="family-name" title="Enter your last name" />
-          </label>
+          <label for="lname">Last Name:</label>
+          <input type="text" id="lname" name="lname" required autocomplete="family-name" title="Enter your last name" /> 
 
-          <label for="orgtitle">Title:
-            <input type="text" id="orgtitle" name="orgtitle" autocomplete="organization-title"
-              pattern="[A-Za-z\s\-]{7,}" title="Only letters, spaces, and hyphens. At least 7 characters." />
-          </label>
+          <label for="orgtitle">Title:</label>
+          <input type="text" id="orgtitle" name="orgtitle" autocomplete="organization-title"
+            pattern="[A-Za-z\s\-]{7,}" title="Only letters, spaces, and hyphens. At least 7 characters." />
+          
 
-          <label for="email">Email:
-            <input type="email" id="email" name="email" required autocomplete="email" placeholder="example@email.com" title="Enter a valid email" />
-          </label>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required autocomplete="email" placeholder="example@email.com" title="Enter a valid email" />
+          
 
-          <label for="phone">Mobile:
-            <input type="tel" id="phone" name="phone" required autocomplete="tel" title="Enter your phone number" />
-          </label>
+          <label for="phone">Mobile:</label>
+          <input type="tel" id="phone" name="phone" required autocomplete="tel" title="Enter your phone number" />
+          
 
-          <label for="orgname">Business Name:
-            <input type="text" id="orgname" name="orgname" required autocomplete="organization" title="Enter the business or organization name" />
-          </label>
+          <label for="orgname">Business Name:</label>
+          <input type="text" id="orgname" name="orgname" required autocomplete="organization" title="Enter the business or organization name" />
+          
 
-          <label for="membership">Membership Level:
-            <select id="membership" name="membership">
-              <option value="np">NP Membership (Free)</option>
-              <option value="bronze">Bronze</option>
-              <option value="silver">Silver</option>
-              <option value="gold">Gold</option>
-            </select>
-          </label>
+          <label for="membership">Membership Level:</label>
+          <select id="membership" name="membership">
+            <option value="np">NP Membership (Free)</option>
+            <option value="bronze">Bronze</option>
+            <option value="silver">Silver</option>
+            <option value="gold">Gold</option>
+          </select>
+          
 
-          <label for="description">Business Description:
+          <label for="description">Business Description:</label>
             <textarea id="description" name="description" title="Briefly describe your organization"></textarea>
-          </label>
 
           <input type="hidden" name="timestamp" id="timestamp" />
-          <input type="submit" value="Apply Now" />
+          <button type="submit">Apply Now</button>
         </form>
       </section>
 
@@ -111,8 +110,7 @@
         </div>
       </section>
     </div>
-
-    <!-- Modals -->
+ 
     <div id="npModal" class="modal" role="dialog" aria-labelledby="npModalLabel" tabindex="0">
       <div class="modal-content">
         <span onclick="closeModal('npModal')" class="close" role="button" aria-label="Close">&times;</span>
@@ -169,6 +167,6 @@
     </div>
   </footer>
 
-  <script src="scripts/join.js"></script>
+  
 </body>
 </html>
