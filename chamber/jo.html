@@ -2,167 +2,90 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Join Us - Chamber of Commerce</title>
-  <link rel="stylesheet" href="styles/normalize.css">
-  <link rel="stylesheet" href="styles/join.css">
+  <title>Site Plan - Nollywood Vibes</title>
+  <link rel="stylesheet" href="styles/site-plan.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff8f0;
+      color: #333;
+      line-height: 1.6;
+      padding: 2rem;
+    }
+
+    h1, h2 {
+      color: #be1e2d; /* Nollywood Red */
+    }
+
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    h2 {
+      border-bottom: 2px solid #f7c600; /* Golden accent */
+      padding-bottom: 5px;
+    }
+
+    section {
+      margin-bottom: 2rem;
+    }
+
+    .wireframe-img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <div class="header-left">
-      <img src="images/logo.jpeg" alt="site logo" class="logo-icon" width="60" height="60">
-    </div>
-    <nav>
-      <button id="menu-toggle">☰</button>
-      <ul class="navigation">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="discover.html">Discover</a></li>
-        <li><a href="directory.html" class="active">Directory</a></li>
-        <li><a href="join.html">Join</a></li>
-      </ul>
-    </nav>
-  </header>
+  <h1>Site Plan: Nollywood Vibes</h1>
 
-  <main>
-    <div class="join-container">
-      <section class="form-section">
-        <h2>Membership Application Form</h2>
-        <form action="thankyou.html" method="get">
-          <label>
-            First Name:
-            <input type="text" name="fname" required autocomplete="given-name" title="Enter your first name">
-          </label>
+  <section>
+    <h2>Site Name</h2>
+    <p><strong>Nollywood Vibes</strong> – This name captures the vibrant energy and unique style of Nigerian cinema. It reflects both a cultural identity and an inviting space to explore Nigerian movies.</p>
+    <p><strong>Optional domain availability:</strong> nollywoodvibes.com.ng</p>
+  </section>
 
-          <label>
-            Last Name:
-            <input type="text" name="lname" required autocomplete="family-name" title="Enter your last name">
-          </label>
+  <section>
+    <h2>Site Purpose</h2>
+    <p>This website serves as a fun and informative space to discover top Nollywood movies, learn more about Nigerian film culture, and explore curated recommendations. It includes a homepage introduction, top picks powered by the OMDB API, and a movie details section with watchlist features and cultural commentary.</p>
+  </section>
 
-          <label>
-            Title:
-            <input type="text" name="orgtitle" autocomplete="organization-title"
-                   pattern="[A-Za-z\s\-]{7,}" title="Only letters, spaces, and hyphens. At least 7 characters.">
-          </label>
+  <section>
+    <h2>Scenarios</h2>
+    <ul>
+      <li>Which Nollywood movie should I watch this weekend?</li>
+      <li>How can I find more details about a Nigerian film I recently heard about?</li>
+    </ul>
+  </section>
 
-          <label>
-            Email:
-            <input type="email" name="email" required autocomplete="email" placeholder="example@email.com" title="Enter a valid email">
-          </label>
+  <section>
+    <h2>Color Schema</h2>
+    <ul>
+      <li><strong>Nollywood Red (#be1e2d):</strong> Used for headings, buttons, and highlights.</li>
+      <li><strong>Gold (#f7c600):</strong> Used for accents, borders, and hover effects.</li>
+      <li><strong>Soft Cream (#fff8f0):</strong> Used for background color to reflect warmth.</li>
+    </ul>
+  </section>
 
-          <label>
-            Mobile:
-            <input type="tel" name="phone" required autocomplete="tel" title="Enter your phone number">
-          </label>
+  <section>
+    <h2>Typography</h2>
+    <ul>
+      <li><strong>Montserrat (Sans-serif):</strong> Used for major headings and titles.</li>
+      <li><strong>Segoe UI:</strong> Used for body text and paragraphs.</li>
+    </ul>
+  </section>
 
-          <label>
-            Business Name:
-            <input type="text" name="orgname" required autocomplete="organization" title="Enter the business or organization name">
-          </label>
-
-          <label>
-            Membership Level:
-            <select name="membership">
-              <option value="np">NP Membership (Free)</option>
-              <option value="bronze">Bronze</option>
-              <option value="silver">Silver</option>
-              <option value="gold">Gold</option>
-            </select>
-          </label>
-
-          <label>
-            Business Description:
-            <textarea name="description" title="Briefly describe your organization"></textarea>
-          </label>
-
-          <input type="hidden" name="timestamp" id="timestamp">
-          <input type="submit" value="Apply Now">
-        </form>
-      </section>
-
-      <section class="membership-levels">
-        <h2>Membership Levels</h2>
-
-        <div class="membership-card">
-          <h3>Non Profit Membership Level</h3>
-          <button onclick="showModal('npModal')">Learn More</button>
-        </div>
-
-        <div class="membership-card">
-          <h3>Bronze Membership Level</h3>
-          <button onclick="showModal('bronzeModal')">Learn More</button>
-        </div>
-
-        <div class="membership-card">
-          <h3>Silver Membership Level</h3>
-          <button onclick="showModal('silverModal')">Learn More</button>
-        </div>
-
-        <div class="membership-card">
-          <h3>Gold Membership Level</h3>
-          <button onclick="showModal('goldModal')">Learn More</button>
-        </div>
-      </section>
-    </div>
-
-    <!-- Modals -->
-    <div id="npModal" class="modal">
-      <div class="modal-content">
-        <span onclick="closeModal('npModal')" class="close">&times;</span>
-        <h4>Non Profit Benefits</h4>
-        <p>Free events, community visibility, and more...</p>
-      </div>
-    </div>
-
-    <div id="bronzeModal" class="modal">
-      <div class="modal-content">
-        <span onclick="closeModal('bronzeModal')" class="close">&times;</span>
-        <h4>Bronze Benefits</h4>
-        <p>Access to networking events, small ads on homepage...</p>
-      </div>
-    </div>
-
-    <div id="silverModal" class="modal">
-      <div class="modal-content">
-        <span onclick="closeModal('silverModal')" class="close">&times;</span>
-        <h4>Silver Benefits</h4>
-        <p>Event discounts, spotlight opportunities, and more...</p>
-      </div>
-    </div>
-
-    <div id="goldModal" class="modal">
-      <div class="modal-content">
-        <span onclick="closeModal('goldModal')" class="close">&times;</span>
-        <h4>Gold Benefits</h4>
-        <p>All benefits included plus premium ad placement and VIP events...</p>
-      </div>
-    </div>
-  </main>
-
-  <footer class="footer-grid">
-
-
-    <div class="footer-section contact">
-      <h4>Imo State Chamber of Commerce</h4>
-      <p>Email: info@imostatechamber.ng</p>
-      <p>Phone: +234 800 123 4567</p>
-      <p>Address: 123 Business Lane, Owerri</p>
-    </div>
-
-    <div class=" footer-section social-icons">
-      <h4>Connect with Us</h4>
-      <a href="https://www.linkedin.com/in/ekechukwuic/" target="_blank"><img src="images/linkedin.webp" width="40" height="40" alt="linkedin"></a>
-      <a href="https://github.com/Innocentiaa" target="_blank"> <img src="images/github.png" width="40" height="40" alt="GitHub profile link"></a>
-      <a href="https://www.instagram.com/centiagwendolyn/" target="_blank"><img src="images/instagram.webp" width="40" height="40" alt="Instagram page"></a>      
-    </div>
-
-    <div class="footer-section credits">
-
-      <h4>All Rights Reserved </h4>
-      <p>&copy; <span id="year"></span> Innocentia Chinweotito</p>
-      <p>WDD 231 Project</p>
-      <p>Last Modified: <span id="lastModified"></span></p>
-    </div>
-  </footer>
-
-</body>
+  <section>
+  <h2>Wireframe</h2>
+  <p>
+    <a href="https://wireframe.cc/qjVLnR" target="_blank">
+      View Desktop Wireframe
+    </a>
+  </p>
+  <p>
+    <a href="https://wireframe.cc/9AWBzH" target="_blank">
+      View Mobile Wireframe
+    </a>
+  </p>
+</section>
 </html>
