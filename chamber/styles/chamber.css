@@ -172,6 +172,7 @@ nav {
   display: grid;
   gap: 1.5rem;
   text-align: center;
+  min-height: 80px;
 }
 
 .footer-section h4 {

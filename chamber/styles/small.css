@@ -1,0 +1,78 @@
+*{
+    box-sizing:border-box;
+}
+
+#allplaces {
+    gap: 1rem;
+}
+
+#allplaces  div {
+    min-height: 320px;
+    margin: 1rem 8px;
+    border: 1px solid #999;
+    background-color: #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+
+
+    display: grid;
+    grid-template-areas: 
+    "name"
+    "photograph"
+    "description"
+    "location";
+}
+
+#allplaces div h2 {
+    margin: 1rem 10x;
+    grid-area: name;
+    font-size: 1.2rem;
+}
+
+#allplaces div img {
+    width: 300px;
+    height: 200px;
+    grid-area: photograph;
+    object-fit: cover;
+    padding: 5px;
+    display: block;
+}
+
+#allplaces div p {
+    margin: 1rem 10px;
+    grid-area: description;
+    font-size: 0.95rem;
+}
+
+#allplaces div address {
+    margin: 1rem 10px;
+    grid-area: location;
+}
+
+
+@media only screen and (min-width:38rem) {
+
+    #allplaces  div {
+    margin: 1rem 8px;
+    border: 1px solid #999;
+    background-color: #eee;
+    border-radius: 8px;
+    overflow: hidden;
+
+    display: grid;
+    grid-template-areas: 
+    "photograph name"
+    "photograph description"
+    "photograph location";
+    }
+
+}
+
+@media only screen and (min-width:64rem) {
+    #allplaces {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
