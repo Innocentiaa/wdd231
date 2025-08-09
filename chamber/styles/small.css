@@ -1,78 +1,148 @@
-*{
-    box-sizing:border-box;
+
+* {
+  box-sizing: border-box;
 }
 
 #allplaces {
-    gap: 1rem;
+  gap: 1rem;
 }
 
-#allplaces  div {
-    min-height: 320px;
-    margin: 1rem 8px;
-    border: 1px solid #999;
-    background-color: #eee;
-    border-radius: 8px;
-    overflow: hidden;
-    padding: 1rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+#allplaces div {
+  min-height: 320px; 
+  margin: 1rem 8px;
+  border: 1px solid #999;
+  background-color: #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 
-
-    display: grid;
-    grid-template-areas: 
-    "name"
-    "photograph"
+  display: grid;
+  grid-template-areas:
+    "title"
+    "photo"
     "description"
-    "location";
+    "address"
+    "button";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 0.5rem;
 }
 
 #allplaces div h2 {
-    margin: 1rem 10x;
-    grid-area: name;
-    font-size: 1.2rem;
+  grid-area: title;
+  margin: 0 10px;
+  font-size: 1.2rem;
+}
+
+#allplaces div figure {
+  margin: 0;
+  grid-area: photo;
+  display: flex;
+  justify-content: center;
 }
 
 #allplaces div img {
-    width: 300px;
-    height: 200px;
-    grid-area: photograph;
-    object-fit: cover;
-    padding: 5px;
-    display: block;
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  padding: 5px;
+  display: block;
+  border-radius: 5px;
 }
 
 #allplaces div p {
-    margin: 1rem 10px;
-    grid-area: description;
-    font-size: 0.95rem;
+  grid-area: description;
+  margin: 0 10px;
+  font-size: 0.95rem;
 }
 
 #allplaces div address {
-    margin: 1rem 10px;
-    grid-area: location;
+  grid-area: address;
+  margin: 0 10px;
+  font-style: normal;
+  font-weight: 600;
 }
 
+#allplaces div button {
+  grid-area: button;
+  justify-self: start;
+  margin: 0 10px;
+  padding: 0.4rem 1rem;
+  background-color: #00332b; /* Dark green */
+  color: #f7c600; /* Gold */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+}
 
-@media only screen and (min-width:38rem) {
+#allplaces div button:hover,
+#allplaces div button:focus {
+  background-color: #025740;
+  outline: none;
+}
 
-    #allplaces  div {
-    margin: 1rem 8px;
-    border: 1px solid #999;
-    background-color: #eee;
-    border-radius: 8px;
-    overflow: hidden;
+@media only screen and (min-width: 38rem) {
+  #allplaces div {
+    grid-template-areas:
+      "photo title"
+      "photo description"
+      "photo address"
+      "photo button";
+    grid-template-columns: 320px 1fr;
+    gap: 1rem;
+  }
 
+  #allplaces div img:hover {
+    filter: brightness(85%);
+    cursor: pointer;
+    transition: filter 0.3s ease;
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+  #allplaces {
     display: grid;
-    grid-template-areas: 
-    "photograph name"
-    "photograph description"
-    "photograph location";
-    }
-
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
-@media only screen and (min-width:64rem) {
-    #allplaces {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  display: none; /* Hidden by default */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal.show {
+  display: flex;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+#modal-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
 }

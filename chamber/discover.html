@@ -1,79 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Discover interesting places in the heart of Imo State chamber of Commerce.">
-    <meta name="author" content="Innocentia Chinweotito">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    
-    <meta property="og:title" content="Imo state Chamber of Commerce Discover page">
-    <meta property="og:description" content="Explore interesting places to have fun in Imo State.">
-    <meta property="og:image" content="https://innocentiaa.github.io/wdd231/chamber/images/imologo.jpeg">
-    <meta property="og:url" content="https://innocentiaa.github.io/wdd231/chamber/directory.html">
-    <meta property="og:type" content="website">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Discover interesting places in the heart of Imo State chamber of Commerce." />
+  <meta name="author" content="Innocentia Chinweotito" />
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 
-    <title>Discover places | Imo State Chamber of Commerce</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    
+  <meta property="og:title" content="Imo State Chamber of Commerce Discover page" />
+  <meta property="og:description" content="Explore interesting places to have fun in Imo State." />
+  <meta property="og:image" content="https://innocentiaa.github.io/wdd231/chamber/images/imologo.jpeg" />
+  <meta property="og:url" content="https://innocentiaa.github.io/wdd231/chamber/discover.html" />
+  <meta property="og:type" content="website" />
 
+  <title>Discover places | Imo State Chamber of Commerce</title>
 
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/small.css">
-    <link rel="stylesheet" href="styles/chamber.css">
-    
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/small.css" />
+  <link rel="stylesheet" href="styles/chamber.css" />
+  <script src="scripts/date.js" type="module" defer></script>
+  <script src="scripts/places.js" type="module" defer></script>
+  <link rel="preload" href="images/oguta-lake.webp" as="image" type="image/webp" />
+
 
 </head>
 <body>
-    <header>
-        <div class="header-left">
-            <img src="images/logo.jpeg" alt="site logo" class="logo-icon" width="60" height="60">
-        </div>
-        <nav>
-            <button id="menu-toggle">☰</button>
-            <ul class="navigation">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="discover.html">Discover</a></li>
-            <li><a href="directory.html" class="active">Directory</a></li>
-            <li><a href="join.html">Join</a></li>
-            </ul>
-        </nav>
-    </header>
-   <main>
+  <header>
+    <div class="header-left">
+      <img src="images/logo.jpeg" alt="site logo" class="logo-icon" width="60" height="60" />
+    </div>
+    <nav>
+      <button id="menu-toggle" aria-label="Toggle menu">☰</button>
+      <ul class="navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="discover.html" class="active">Discover</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
     <h1>Discover Interesting Places in Imo State</h1>
-    <section id="allplaces" class="grid">  
-      <!-- Member cards will load here -->
+
+    <aside id="visit-message" aria-live="polite" class="visit-message" style="margin-bottom:1rem; font-weight:bold;"></aside>
+
+    <section id="allplaces" class="grid">
     </section>
-    </main>
+  </main>
 
-    <footer class="footer-grid">
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-title" tabindex="-1">
+    <div class="modal-content">
+      <button id="modal-close" class="modal-close" aria-label="Close modal">&times;</button>
+      <h2 id="modal-title"></h2>
+      <img id="modal-img" src="" alt="" width="300" height="200" />
+      <address id="modal-address"></address>
+      <p id="modal-description"></p>
+    </div>
+  </div>
 
-        <div class="footer-section contact">
-            <h4>Imo State Chamber of Commerce</h4>
-            <p>Email: info@imostatechamber.ng</p>
-            <p>Phone: +234 800 123 4567</p>
-        <p>Address: 123 Business Lane, Owerri</p>
-        </div>
+  <footer class="footer-grid">
+    <div class="footer-section contact">
+      <h4>Imo State Chamber of Commerce</h4>
+      <p>Email: info@imostatechamber.ng</p>
+      <p>Phone: +234 800 123 4567</p>
+      <p>Address: 123 Business Lane, Owerri</p>
+    </div>
 
-        <div class=" footer-section social-icons">
-            <h4>Connect with Us</h4>
-            <a href="https://www.linkedin.com/in/ekechukwuic/" target="_blank"><img src="images/linkedin.webp" width="40" height="40" alt="linkedin"></a>
-            <a href="https://github.com/Innocentiaa" target="_blank"> <img src="images/github.png" width="40" height="40" alt="GitHub profile link"></a>
-            <a href="https://www.instagram.com/centiagwendolyn/" target="_blank"><img src="images/instagram.webp" width="40" height="40" alt="Instagram page"></a>
-            
-        </div>
+    <div class="footer-section social-icons">
+      <h4>Connect with Us</h4>
+      <a href="https://www.linkedin.com/in/ekechukwuic/" target="_blank" rel="noopener noreferrer">
+        <img src="images/linkedin.webp" width="40" height="40" alt="LinkedIn" />
+      </a>
+      <a href="https://github.com/Innocentiaa" target="_blank" rel="noopener noreferrer">
+        <img src="images/github.png" width="40" height="40" alt="GitHub profile" />
+      </a>
+      <a href="https://www.instagram.com/centiagwendolyn/" target="_blank" rel="noopener noreferrer">
+        <img src="images/instagram.webp" width="40" height="40" alt="Instagram page" />
+      </a>
+    </div>
 
-        <div class="footer-section credits">
+    <div class="footer-section credits">
+      <h4>All Rights Reserved</h4>
+      <p>&copy; <span id="year"></span> Innocentia Chinweotito</p>
+      <p>WDD 231 Project</p>
+      <p>Last Modified: <span id="lastModified"></span></p>
+    </div>
+  </footer>
 
-            <h4>All Rights Reserved </h4>
-            <p>&copy; <span id="year"></span> Innocentia Chinweotito</p>
-            <p>WDD 231 Project</p>
-            <p>Last Modified: <span id="lastModified"></span></p>
-        </div>
-    </footer>
-<script src="scripts/places.js" type="module" ></script>
 </body>
 </html>

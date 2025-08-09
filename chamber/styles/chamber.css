@@ -1,4 +1,4 @@
-/* === RESET === */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,7 +12,7 @@ body {
   color: #333;
 }
 
-/* === HEADER === */
+
 header {
   display: flex;
   justify-content: space-between;
@@ -35,7 +35,7 @@ header h1 {
   margin-top: 0.5rem;
 }
 
-/* === NAVIGATION === */
+
 #menu-toggle {
   display: none;
   background: none;
@@ -76,7 +76,6 @@ nav {
   border-radius: 4px;
 }
 
-/* === HERO === */
 .hero {
   position: relative;
   width: 100%;
@@ -115,7 +114,7 @@ nav {
   border-radius: 5px;
 }
 
-/* === EVENTS === */
+
 .events {
   background-color: #f9f9f9;
   padding: 2rem;
@@ -132,13 +131,11 @@ nav {
   margin-left: 1.5rem;
 }
 
-/* === WEATHER === */
 .weather {
   padding: 2rem;
   text-align: center;
 }
 
-/* === SPOTLIGHT === */
 .spotlights {
   padding: 2rem;
   background-color: #e8f5e9;
@@ -164,7 +161,6 @@ nav {
   height: auto;
 }
 
-/* === FOOTER === */
 .footer-grid {
   background-color: #004d40;
   color: white;
@@ -172,7 +168,7 @@ nav {
   display: grid;
   gap: 1.5rem;
   text-align: center;
-  min-height: 80px;
+  min-height: 100px;
 }
 
 .footer-section h4 {
@@ -189,7 +185,6 @@ nav {
   color: white;
 }
 
-/* === DIRECTORY STYLES === */
 .view-toggle {
   text-align: center;
   margin: 1rem auto;
@@ -271,7 +266,7 @@ nav {
   text-decoration: underline;
 }
 
-/* === MEDIA QUERIES === */
+
 @media (max-width: 599px) {
   #menu-toggle {
     display: block;

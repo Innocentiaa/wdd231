@@ -2,7 +2,7 @@ export const places =[
   {
     "name": "Oguta Lake Holiday Complex",
     "address": "Oguta town, Oguta LGA, Imo State, Nigeria",
-    "cost": "Boat ride: ~₦3,000 for 2 people; Transport: ₦800–₦1,500 from Owerri",
+    "cost": "Boat ride: ~₦3,000 for 2 people; Transport: ₦800-₦1,500 from Owerri",
     "description": "A scenic natural lake with a unique confluence where green and brown waters meet but never mix. Includes a holiday complex with a golf course, boat rides, kids’ park, and Biafran-era relics.",
     "photo_url": "oguta-lake.webp"
   },
