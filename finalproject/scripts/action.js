@@ -28,16 +28,6 @@ function loadMovies() {
 
     attachEventListeners();
 }
-const preloadImages = [
-  "images/christmas-in-miami.jpg",
-  "images/brave-heart.jpg",
-];
-
-// Preload each image
-preloadImages.forEach(src => {
-  const img = new Image();
-  img.src = src; // browser starts loading the image
-});
 
 // Attach event listeners for buttons
 function attachEventListeners() {
