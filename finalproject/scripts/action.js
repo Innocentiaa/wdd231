@@ -15,7 +15,7 @@ function loadMovies() {
         card.classList.add("movie-card");
 
         card.innerHTML = `
-            <img src="images/${movie.poster}" alt="${movie.title}" width="300" height="200">
+            <img src="images/${movie.poster}" alt="${movie.title}" width="300" height="200" loading="lazy">
             <h3>${movie.title}</h3>
             <p>${movie.genre}</p>
             <p>⭐ ${movie.rating}</p>
@@ -62,7 +62,7 @@ function showMovieDetails(index) {
     modalContent.innerHTML = `
         <button class="modal-close" aria-label="Close modal">&times;</button>
         <h2 id="modal-title">${movie.title}</h2>
-        <img id="modal-image" src="images/${movie.poster}" alt="${movie.title}">
+        <img id="modal-image" src="images/${movie.poster}" alt="${movie.title}" >
         <p id="modal-description">${movie.description}</p>
         <p><strong>Release Date:</strong> <span id="modal-release">${movie.year}</span></p>
         <p><strong>Genre:</strong> <span id="modal-genre">${movie.genre}</span></p>
@@ -138,5 +138,6 @@ loadMovies();
 // action.js
 const params = new URLSearchParams(window.location.search);
 
-document.getElementById("displayName").textContent = params.get("name") || "Guest";
+document.getElementById("displayName").textContent = params.get("fname") || "Guest";
+document.getElementById("displayName").textContent = params.get("lname") || "Guest";
 document.getElementById("displayEmail").textContent = params.get("email") || "Not Provided";
