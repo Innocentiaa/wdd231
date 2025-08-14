@@ -137,7 +137,6 @@ loadMovies();
 
 // action.js
 const params = new URLSearchParams(window.location.search);
-
-document.getElementById("displayName").textContent = params.get("fname") || "Guest";
-document.getElementById("displayName").textContent = params.get("lname") || "Guest";
+document.getElementById("fname").textContent = params.get("fname") || "";
+document.getElementById("lname").textContent = params.get("lname") || "";
 document.getElementById("displayEmail").textContent = params.get("email") || "Not Provided";
