@@ -1,0 +1,95 @@
+/* favorites.css */
+
+/* General page style */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Header and footer */
+header, footer {
+  background-color: #00332b; /* Dark green */
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+header nav a, footer a {
+  color: #f7c600; /* Gold */
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+header nav a:hover, footer a:hover {
+  text-decoration: underline;
+}
+
+/* Main layout */
+main {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+
+/* Container for favorite movies */
+#favorites-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Individual movie card */
+.movie-card {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+}
+
+.movie-card:hover {
+  transform: scale(1.02);
+}
+
+/* Movie image */
+.movie-card img {
+  width: 100%;
+  height: 200px;        /* fixed height */
+  object-fit: cover;    /* crops image nicely without distortion */
+}
+
+/* Movie info */
+.movie-card h3 {
+  margin: 10px;
+  font-size: 1.2rem;
+  color: #00332b;
+}
+
+.movie-card p {
+  margin: 0 10px 10px 10px;
+  color: #666;
+}
+
+/* Remove button */
+.remove-btn {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.remove-btn:hover {
+  background-color: #d32f2f;
+}
+
