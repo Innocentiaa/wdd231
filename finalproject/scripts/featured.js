@@ -54,7 +54,6 @@ import { movies } from '../data/movie.mjs';
 
 const featuredContainer = document.getElementById("featured-list");
 
-
 const modal = document.getElementById('modal');
 const modalTitle = document.getElementById('modal-title');
 const modalImg = document.getElementById('modal-img');
@@ -64,71 +63,68 @@ const modalRating = document.getElementById('modal-rating');
 const modalDescription = document.getElementById('modal-description');
 const modalCloseBtn = document.getElementById('modal-close');
 
-
+// Open modal
 function openModal(movie) {
-  modalTitle.textContent = movie.title;
-  modalImg.src = `images/${movie.poster}`;
-  modalImg.alt = movie.title;
-  modalGenre.textContent = `Genre: ${movie.genre}`;
-  modalYear.textContent = `Year: ${movie.year}`;
-  modalRating.textContent = `⭐ ${movie.rating}`;
-  modalDescription.textContent = movie.description;
+    modalTitle.textContent = movie.title;
+    modalImg.src = `images/${movie.poster}`;
+    modalImg.alt = movie.title;
+    modalImg.loading = "lazy"; // Lazy load modal images
+    modalGenre.textContent = `Genre: ${movie.genre}`;
+    modalYear.textContent = `Year: ${movie.year}`;
+    modalRating.textContent = `⭐ ${movie.rating}`;
+    modalDescription.textContent = movie.description;
 
-  modal.classList.add('show');
-  modal.setAttribute('aria-hidden', 'false');
+    modal.classList.add('show');
+    modal.setAttribute('aria-hidden', 'false');
 }
 
-
+// Close modal
 function closeModal() {
-  modal.classList.remove('show');
-  modal.setAttribute('aria-hidden', 'true');
+    modal.classList.remove('show');
+    modal.setAttribute('aria-hidden', 'true');
 }
 
 modalCloseBtn.addEventListener('click', closeModal);
-modal.addEventListener('click', (e) => {
-  if (e.target === modal) closeModal();
-});
-document.addEventListener('keydown', (e) => {
-  if (e.key === "Escape" && modal.classList.contains('show')) closeModal();
-});
+modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+document.addEventListener('keydown', (e) => { if (e.key === "Escape" && modal.classList.contains('show')) closeModal(); });
 
-
+// Display featured movies
 function displayFeaturedMovies() {
-  const featuredMovies = movies.filter(movie => movie.rating > 8.5);
+    const featuredMovies = movies.filter(movie => movie.rating > 8.5);
 
-  featuredMovies.forEach(movie => {
-    const card = document.createElement('div');
+    featuredMovies.forEach(movie => {
+        const card = document.createElement('div');
 
-    const figure = document.createElement('figure');
-    const img = document.createElement('img');
-    img.src = `images/${movie.poster}`;
-    img.alt = movie.title;
-    img.width = 300;
-    img.height = 200;
-    img.loading = "lazy";
-    figure.appendChild(img);
-    card.appendChild(figure);
+        const figure = document.createElement('figure');
+        const img = document.createElement('img');
+        img.src = `images/${movie.poster}`;
+        img.alt = movie.title;
+        img.width = 300;
+        img.height = 200;
+        img.loading = "lazy"; // Lazy load
+        figure.appendChild(img);
+        card.appendChild(figure);
 
-    const title = document.createElement('h2');
-    title.textContent = movie.title;
-    card.appendChild(title);
+        const title = document.createElement('h2');
+        title.textContent = movie.title;
+        card.appendChild(title);
 
-    const genre = document.createElement('h3');
-    genre.textContent = movie.genre;
-    card.appendChild(genre);
+        const genre = document.createElement('h3');
+        genre.textContent = movie.genre;
+        card.appendChild(genre);
 
-    const rating = document.createElement('p');
-    rating.textContent = `⭐ ${movie.rating}`;
-    card.appendChild(rating);
+        const rating = document.createElement('p');
+        rating.textContent = `⭐ ${movie.rating}`;
+        card.appendChild(rating);
 
-    const button = document.createElement('button');
-    button.textContent = "Learn More";
-    button.setAttribute('aria-label', `Learn more about ${movie.title}`);
-    button.addEventListener('click', () => openModal(movie));
-    card.appendChild(button);
+        const button = document.createElement('button');
+        button.textContent = "Learn More";
+        button.setAttribute('aria-label', `Learn more about ${movie.title}`);
+        button.addEventListener('click', () => openModal(movie));
+        card.appendChild(button);
 
-    featuredContainer.appendChild(card);
-  });
+        featuredContainer.appendChild(card);
+    });
 }
 
 displayFeaturedMovies();

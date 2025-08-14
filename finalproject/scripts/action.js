@@ -1,10 +1,8 @@
-
 import { movies } from "../data/movie.mjs";
 
 const moviesContainer = document.getElementById("movies-container") || document.getElementById("featured-list");
 const modal = document.getElementById("movie-modal");
 const modalContent = modal.querySelector(".modal-content");
-const modalClose = modal.querySelector(".modal-close");
 
 // Load movies dynamically
 function loadMovies() {
@@ -52,7 +50,7 @@ function showMovieDetails(index) {
     modalContent.innerHTML = `
         <button class="modal-close" aria-label="Close modal">&times;</button>
         <h2 id="modal-title">${movie.title}</h2>
-        <img id="modal-image" src="images/${movie.poster}" alt="${movie.title}" >
+        <img id="modal-image" src="images/${movie.poster}" alt="${movie.title}" loading="lazy">
         <p id="modal-description">${movie.description}</p>
         <p><strong>Release Date:</strong> <span id="modal-release">${movie.year}</span></p>
         <p><strong>Genre:</strong> <span id="modal-genre">${movie.genre}</span></p>
@@ -69,23 +67,18 @@ function showMovieDetails(index) {
 
     modal.addEventListener('keydown', function trapFocus(e) {
         if (e.key === 'Tab') {
-            if (e.shiftKey) { // Shift + Tab
-                if (document.activeElement === firstEl) {
-                    e.preventDefault();
-                    lastEl.focus();
-                }
-            } else { // Tab
-                if (document.activeElement === lastEl) {
-                    e.preventDefault();
-                    firstEl.focus();
-                }
+            if (e.shiftKey && document.activeElement === firstEl) {
+                e.preventDefault();
+                lastEl.focus();
+            } else if (!e.shiftKey && document.activeElement === lastEl) {
+                e.preventDefault();
+                firstEl.focus();
             }
         } else if (e.key === 'Escape') {
             closeModal();
         }
     });
 
-    // Close modal
     modal.querySelector(".modal-close").addEventListener("click", closeModal);
 }
 
@@ -96,36 +89,34 @@ function closeModal() {
 }
 
 // Add to favorites in localStorage
-// Add to favorites in localStorage
 function addToFavorites(index) {
-  let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-  const movie = movies[index];
+    let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+    const movie = movies[index];
 
-  if (!favorites.some(fav => fav.title === movie.title)) {
-    favorites.push({
-      title: movie.title,
-      year: movie.year,
-      genre: movie.genre,
-      poster: movie.poster, // just the file name, no "images/"
-      description: movie.description
-    });
-    localStorage.setItem("favorites", JSON.stringify(favorites));
-    alert(`${movie.title} added to Favorites!`);
-  } else {
-    alert(`${movie.title} is already in Favorites.`);
-  }
+    if (!favorites.some(fav => fav.title === movie.title)) {
+        favorites.push({
+            title: movie.title,
+            year: movie.year,
+            genre: movie.genre,
+            poster: movie.poster,
+            description: movie.description
+        });
+        localStorage.setItem("favorites", JSON.stringify(favorites));
+        alert(`${movie.title} added to Favorites!`);
+    } else {
+        alert(`${movie.title} is already in Favorites.`);
+    }
 }
+
 // Close modal when clicking outside
 window.addEventListener("click", (event) => {
-    if (event.target === modal) {
-        closeModal();
-    }
+    if (event.target === modal) closeModal();
 });
 
 // Initialize
 loadMovies();
 
-// action.js
+// Display URL params
 const params = new URLSearchParams(window.location.search);
 document.getElementById("fname").textContent = params.get("fname") || "";
 document.getElementById("lname").textContent = params.get("lname") || "";
